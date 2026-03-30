@@ -1,30 +1,54 @@
 {
   "version": "0.2.0",
   "projectName": "proj",
-  // "configurations": [
-  //   {
-  //     "cwd": "${workspaceFolder}",
-  //     "executable": "${workspaceRoot}/build/stm32f746/app/cli_app/cli_app",
-  //     "name": "DEBUG CLI F7",
-  //     "request": "launch",
-  //     "type": "cortex-debug",
-  //     "servertype": "openocd",
-  //     "device": "STM32F746",
-  //     "svdFile": "${workspaceRoot}/mcu_support/stm32/f7xx/f746/STM32F746.svd",
-  //     "searchDir": ["${workspaceRoot}/mcu_support/stm32"],
-  //     "runToMain": true,
-  //     "configFiles": [
-  //       "${workspaceRoot}/mcu_support/stm32/stlink-dap.cfg",
-  //       "${workspaceRoot}/mcu_support/stm32/f7xx/stm32f7x.cfg"
-  //     ],
-  //     "debuggerArgs": ["-d", "${workspaceRoot}"],
-  //     "preRestartCommands": [
-  //       "add-symbol-file /build/stm32f746/app/cli_app/cli_app",
-  //       "load",
-  //       "enable breakpoint",
-  //       "monitor reset"
-  //     ]
-  //   }
-  // ]
+  "configurations": [
+    {
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceRoot}/build/stm32f746/app/cli_app/cli_app",
+      "name": "DEBUG CLI F7",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "device": "STM32F746",
+      "svdFile": "${workspaceRoot}/mcu_support/stm32/f7xx/f746/STM32F746.svd",
+      "searchDir": ["${workspaceRoot}/mcu_support/stm32"],
+      "runToMain": true,
+      "configFiles": [
+        "${workspaceRoot}/mcu_support/stm32/stlink-dap.cfg",
+        "${workspaceRoot}/mcu_support/stm32/f7xx/stm32f7x.cfg"
+      ],
+      "debuggerArgs": ["-d", "${workspaceRoot}"],
+      "preRestartCommands": [
+        "add-symbol-file /build/stm32f746/app/cli_app/cli_app",
+        "load",
+        "enable breakpoint",
+        "monitor reset"
+      ]
+    },
+    {
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceRoot}/build/stm32h723/app/blink/blink",
+      "name": "DEBUG BLINK H7",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "device": "STM32H7",
+      "svdFile": "${workspaceRoot}/mcu_support/h7xx/STM32H723.svd",
+      "searchDir": ["${workspaceRoot}/mcu_support/stm32"],
+      "runToMain": true,
+      "configFiles": [
+        "${workspaceRoot}/mcu_support/stm32/stlink-dap.cfg",
+        "${workspaceRoot}/mcu_support/stm32/h7xx/stm32h7x.cfg"
+      ],
+      "debuggerArgs": ["-d", "${workspaceRoot}"],
+      "preRestartCommands": [
+        "add-symbol-file build/stm32h723/app/blink/blink",
+        "load",
+        "enable breakpoint",
+        "monitor reset"
+      ],
+      "showDevDebugOutput": true
+    }
+  ]
 }
 
