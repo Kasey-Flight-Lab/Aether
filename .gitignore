@@ -1,5 +1,5 @@
 **/Build
-**/Build
+**/build
 *.ninja
 cmake_install.cmake
 CMakeCache.txt
@@ -10,7 +10,8 @@ CMakeCache.txt
 **/.vscode/settings.json
 **/venv
 .venv*
-.clangd
-clangd
 .cache
 compile_commands.json
+.clangd
+clangd
+devcontainer-lock.json
