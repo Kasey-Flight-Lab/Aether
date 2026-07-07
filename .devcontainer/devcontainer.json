@@ -1,5 +1,5 @@
 {
-	"name": "LBR Develop",
+	"name": "KFL Develop",
 	"build": {
 		"dockerfile": "../Dockerfile",
 		"context": "..",
@@ -8,8 +8,8 @@
 		}
 	},
 	"mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/home/lbr/.ssh,type=bind,readonly",
-		"source=${localEnv:HOME}/.gitconfig,target=/home/lbr/.gitconfig,type=bind,readonly"
+		"source=${localEnv:HOME}/.ssh,target=/home/kfl/.ssh,type=bind,readonly",
+		"source=${localEnv:HOME}/.gitconfig,target=/home/kfl/.gitconfig,type=bind,readonly"
 	],
 	"forwardPorts": [
 		50000,
@@ -80,7 +80,7 @@
 		"--device-cgroup-rule=c 189:* rmw",
 		"--device-cgroup-rule=c 166:* rmw"
 	],
-	"remoteUser": "lbr",
+	"remoteUser": "kfl",
 	"updateRemoteUserUID": true,
 	"workspaceFolder": "/workspace",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",

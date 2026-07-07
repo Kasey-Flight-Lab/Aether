@@ -33,10 +33,10 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 # Create team development user.
 RUN userdel -r ubuntu 2>/dev/null || true && \
-  groupadd --gid 1000 lbr && \
-  useradd --uid 1000 --gid 1000 -ms /bin/bash lbr && \
-  usermod -aG sudo,dialout,plugdev lbr && \
-  echo "lbr ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/lbr
+  groupadd --gid 1000 kfl && \
+  useradd --uid 1000 --gid 1000 -ms /bin/bash kfl && \
+  usermod -aG sudo,dialout,plugdev kfl && \
+  echo "kfl ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/kfl
 
 # Verify installations
 RUN git --version && \
